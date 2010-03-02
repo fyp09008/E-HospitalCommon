@@ -2,8 +2,6 @@ package message;
 
 import java.io.Serializable;
 
-import javax.crypto.Cipher;
-
 public class AuthResponseMessage implements Serializable{
 
 	/**

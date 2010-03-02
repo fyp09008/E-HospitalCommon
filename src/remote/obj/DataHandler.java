@@ -1,4 +1,4 @@
-package remoteInterface;
+package remote.obj;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
