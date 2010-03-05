@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 #This file allowed git to ignore certain file to be versioned.
 
 *.class
 bin/*
+=======
+#This file allowed git to ignore certain file to be versioned.
+*.class
+bin/*
+.classpath
+.project
+>>>>>>> 55e00c2fe9e6e62adbcca428ba3d4abdb5dc53ad
