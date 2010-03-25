@@ -9,5 +9,7 @@ public interface AuthHandler extends Remote {
 	public byte[] authenticate(String username, byte[]HEPwd) throws RemoteException;
 	public byte[] getEncryptedSessionKey(String username) throws RemoteException;
 	public ResultSet getPrivilege(String username) throws RemoteException;
+	public byte[] getLoMsg(String username) throws RemoteException;
+	public boolean logout(String username, byte[] lomsg) throws RemoteException;
 	
 }
