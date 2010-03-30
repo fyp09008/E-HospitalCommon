@@ -6,10 +6,10 @@ import java.sql.ResultSet;
 
 public interface AuthHandler extends Remote {
 
-	public byte[] authenticate(String username, byte[]HEPwd) throws RemoteException;
-	public byte[] getEncryptedSessionKey(String username) throws RemoteException;
-	public ResultSet getPrivilege(String username) throws RemoteException;
-	public byte[] getLoMsg(String username) throws RemoteException;
-	public boolean logout(String username, byte[] lomsg) throws RemoteException;
+	public byte[] authenticate(byte[] usernameIn, byte[]HEPwdIn) throws RemoteException;
+	public byte[] getEncryptedSessionKey(byte[] usernameIn) throws RemoteException;
+	public byte[] getPrivilege(byte[] usernameIn) throws RemoteException;
+	public byte[] getLoMsg(byte[] usernameIn) throws RemoteException;
+	public byte[] logout(byte[] usernameIn, byte[] lomsg) throws RemoteException;
 	
 }
