@@ -13,6 +13,6 @@ public interface DataHandler extends Remote {
 	
 	public int update(String sessionID, byte[] updateStmt) throws RemoteException;
 	
-	public int update(String sessionID, byte[] updateStmt, byte[] param) throws RemoteException;
+	public boolean update(String sessionID, byte[] updateStmt, byte[] param) throws RemoteException;
 	
 }
