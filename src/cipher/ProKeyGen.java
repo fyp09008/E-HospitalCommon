@@ -49,7 +49,7 @@ public class ProKeyGen {
 			byte[] hashedKey = MessageDigest.getInstance("md5").digest(selectedVal);
 			this.ProgramKey = new SecretKeySpec(hashedKey, "AES");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
 			this.ProgramKey = null;
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
