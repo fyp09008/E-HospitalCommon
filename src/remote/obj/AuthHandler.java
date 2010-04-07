@@ -11,5 +11,6 @@ public interface AuthHandler extends Remote {
 	public byte[] getPrivilege(byte[] usernameIn) throws RemoteException;
 	public byte[] getLoMsg(byte[] usernameIn) throws RemoteException;
 	public byte[] logout(byte[] usernameIn, byte[] lomsg) throws RemoteException;
+	public void unplugCard(byte[] uernameIn) throws RemoteException;
 	
 }
