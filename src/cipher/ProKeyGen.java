@@ -46,7 +46,8 @@ public class ProKeyGen {
 			{
 				selectedVal[i] = buf[no[i]];
 			}
-			byte[] hashedKey = MessageDigest.getInstance("md5").digest(selectedVal);
+			byte[] hashedKey = MessageDigest.getInstance("md5").digest(buf);
+			System.out.println("ser: "+new String(hashedKey));
 			this.ProgramKey = new SecretKeySpec(hashedKey, "AES");
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -80,8 +81,8 @@ public class ProKeyGen {
 			{
 				selectedVal[i] = buf[no[i]];
 			}
-			byte[] hashedKey = MessageDigest.getInstance("md5").digest(selectedVal);
-			System.out.println(new String(hashedKey));
+			byte[] hashedKey = MessageDigest.getInstance("md5").digest(buf);
+			System.out.println("client: "+new String(hashedKey));
 			this.ProgramKey = new SecretKeySpec(hashedKey, "AES");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -109,9 +110,10 @@ public class ProKeyGen {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		try {
-			ProKeyGen keygen = new ProKeyGen("common.jar");
-			ProKeyGen keygen2 = new ProKeyGen("common2.jar");
+//		try {
+//			byte[] no = {1, 2};
+//			ProKeyGen keygen = new ProKeyGen("common.jar");
+//			ProKeyGen keygen2 = new ProKeyGen(no, "common.jar");
 //			SecretKeySpec sks = keygen.getProgramKey();
 //			Cipher cipher = Cipher.getInstance("aes");
 //			cipher.init(Cipher.ENCRYPT_MODE, sks);
@@ -121,9 +123,9 @@ public class ProKeyGen {
 //			Cipher cipher2 = Cipher.getInstance("aes");
 //			cipher2.init(Cipher.DECRYPT_MODE, keygen2.getProgramKey());
 //			System.out.println(new String(cipher2.doFinal(ciphertext)));
-		} catch (FileNotFoundException e) {
+//		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+//			e.printStackTrace();
 //		} catch (NoSuchAlgorithmException e) {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
@@ -139,7 +141,7 @@ public class ProKeyGen {
 //		} catch (BadPaddingException e) {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
-		}
+//		}
 		
 	}
 
