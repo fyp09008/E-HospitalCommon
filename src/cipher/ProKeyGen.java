@@ -67,7 +67,7 @@ public class ProKeyGen {
 		File f = new File(this.path2jar);
 		DataInputStream bytein = new DataInputStream(new FileInputStream(f));
 		byte[] buf = new byte[(int) f.length()];
-		int size = (int) Math.random()*buf.length;
+		int size = buf.length;
 		this.no = new byte[size];
 		for (int i = 0; i < size; i++)
 		{
@@ -81,6 +81,7 @@ public class ProKeyGen {
 				selectedVal[i] = buf[no[i]];
 			}
 			byte[] hashedKey = MessageDigest.getInstance("md5").digest(selectedVal);
+			System.out.println(new String(hashedKey));
 			this.ProgramKey = new SecretKeySpec(hashedKey, "AES");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -110,33 +111,34 @@ public class ProKeyGen {
 		// TODO Auto-generated method stub
 		try {
 			ProKeyGen keygen = new ProKeyGen("common.jar");
-			SecretKeySpec sks = keygen.getProgramKey();
-			Cipher cipher = Cipher.getInstance("aes");
-			cipher.init(Cipher.ENCRYPT_MODE, sks);
-			byte [] ciphertext = cipher.doFinal(new String("This is test String").getBytes());
-			System.out.println(new String(ciphertext));
-			ProKeyGen keygen2 = new ProKeyGen(keygen.getNo(), "common.jar");
-			Cipher cipher2 = Cipher.getInstance("aes");
-			cipher2.init(Cipher.DECRYPT_MODE, keygen2.getProgramKey());
-			System.out.println(new String(cipher2.doFinal(ciphertext)));
+			ProKeyGen keygen2 = new ProKeyGen("common2.jar");
+//			SecretKeySpec sks = keygen.getProgramKey();
+//			Cipher cipher = Cipher.getInstance("aes");
+//			cipher.init(Cipher.ENCRYPT_MODE, sks);
+//			byte [] ciphertext = cipher.doFinal(new String("This is test String").getBytes());
+//			System.out.println(new String(ciphertext));
+//			ProKeyGen keygen2 = new ProKeyGen(keygen.getNo(), "common.jar");
+//			Cipher cipher2 = Cipher.getInstance("aes");
+//			cipher2.init(Cipher.DECRYPT_MODE, keygen2.getProgramKey());
+//			System.out.println(new String(cipher2.doFinal(ciphertext)));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (NoSuchPaddingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvalidKeyException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalBlockSizeException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (BadPaddingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+//		} catch (NoSuchAlgorithmException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (NoSuchPaddingException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (InvalidKeyException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IllegalBlockSizeException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (BadPaddingException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
 		}
 		
 	}
