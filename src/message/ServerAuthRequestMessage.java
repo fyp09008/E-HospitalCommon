@@ -2,6 +2,11 @@ package message;
 
 import java.io.Serializable;
 
+/**
+ * obsolete class, developed in 09/10 semester 1 using socket programming.
+ * @author Gilbert
+ *
+ */
 public class ServerAuthRequestMessage implements Serializable{
 
 	/**

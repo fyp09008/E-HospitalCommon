@@ -6,6 +6,7 @@ package message;
 import java.io.Serializable;
 
 /**
+ * obsolete class, developed in 09/10 semester 1 using socket programming.
  * @author mc
  *
  */

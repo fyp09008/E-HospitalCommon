@@ -19,6 +19,7 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
 /**
+ * The class that can authenticate the program
  * @author mhchung
  *
  */
@@ -29,6 +30,7 @@ public class ProKeyGen {
 	private SecretKeySpec ProgramKey;
 	
 	/**
+	 * The constructor that hashed the selected num of bytes and create a program key.
 	 * @param no The byte array storing the position of the byte hashed
 	 * @param path2jar The path to jar
 	 * @throws FileNotFoundException 
@@ -59,6 +61,7 @@ public class ProKeyGen {
 	}
 
 	/**
+	 * Hashed a random number of bytes in random number of line.
 	 * By default the position of byte hashed is randomly generated
 	 * @param path2jar The path to jar
 	 * @throws FileNotFoundException 
@@ -93,55 +96,60 @@ public class ProKeyGen {
 		}
 	}
 
+	/**
+	 * get generated Key
+	 * @return Program Key
+	 */
 	public SecretKeySpec getProgramKey() {
 		return ProgramKey;
 	}
 
+	/**
+	 * get the number of bytes hashed.
+	 * @return
+	 */
 	public byte[] getNo() {
 		return no;
 	}
 
+	/**
+	 * set the number bytes hashed.
+	 * @param no
+	 */
 	public void setNo(byte[] no) {
 		this.no = no;
 	}
 
 	/**
+	 * Main Class for unit testing.
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//		try {
-//			byte[] no = {1, 2};
-//			ProKeyGen keygen = new ProKeyGen("common.jar");
-//			ProKeyGen keygen2 = new ProKeyGen(no, "common.jar");
-//			SecretKeySpec sks = keygen.getProgramKey();
-//			Cipher cipher = Cipher.getInstance("aes");
-//			cipher.init(Cipher.ENCRYPT_MODE, sks);
-//			byte [] ciphertext = cipher.doFinal(new String("This is test String").getBytes());
-//			System.out.println(new String(ciphertext));
-//			ProKeyGen keygen2 = new ProKeyGen(keygen.getNo(), "common.jar");
-//			Cipher cipher2 = Cipher.getInstance("aes");
-//			cipher2.init(Cipher.DECRYPT_MODE, keygen2.getProgramKey());
-//			System.out.println(new String(cipher2.doFinal(ciphertext)));
-//		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (NoSuchAlgorithmException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (NoSuchPaddingException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (InvalidKeyException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (IllegalBlockSizeException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (BadPaddingException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		try {
+			byte[] no = {1, 2};
+			ProKeyGen keygen = new ProKeyGen("common.jar");
+			ProKeyGen keygen2 = new ProKeyGen(no, "common.jar");
+			SecretKeySpec sks = keygen.getProgramKey();
+			Cipher cipher = Cipher.getInstance("aes");
+			cipher.init(Cipher.ENCRYPT_MODE, sks);
+			byte [] ciphertext = cipher.doFinal(new String("This is test String").getBytes());
+			System.out.println(new String(ciphertext));
+			Cipher cipher2 = Cipher.getInstance("aes");
+			cipher2.init(Cipher.DECRYPT_MODE, keygen2.getProgramKey());
+			System.out.println(new String(cipher2.doFinal(ciphertext)));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		} catch (NoSuchPaddingException e) {
+			e.printStackTrace();
+		} catch (InvalidKeyException e) {
+			e.printStackTrace();
+		} catch (IllegalBlockSizeException e) {
+			e.printStackTrace();
+		} catch (BadPaddingException e) {
+			e.printStackTrace();
+		}
 		
 	}
 
