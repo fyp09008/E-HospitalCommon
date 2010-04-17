@@ -49,7 +49,6 @@ public class ProKeyGen {
 				selectedVal[i] = buf[no[i]];
 			}
 			byte[] hashedKey = MessageDigest.getInstance("md5").digest(buf);
-			System.out.println("ser: "+new String(hashedKey));
 			this.ProgramKey = new SecretKeySpec(hashedKey, "AES");
 		} catch (IOException e) {
 			e.printStackTrace();
