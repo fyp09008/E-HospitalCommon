@@ -2,15 +2,23 @@ package cipher;
 
 import java.io.*;
 
+/**
+ * RSA Driver for Hardware decryption and encryption.
+ * @author      FYP 08/09
+ */
 public class RSADriver {
-	private String inFile, outFile, keyFile;
+	private String inFile;
+	private String outFile;
+	private String keyFile;
+	/**
+	 * @uml.associationEnd  
+	 */
 	private RSAHardware hardCipher;
 	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String usage = "Usage: java cipher.RSADriver <encrypt | decrypt | genkey> [<key file> | <input file> <output file>]";
 		
 		if (args.length == 0)

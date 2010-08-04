@@ -8,8 +8,7 @@ import org.apache.log4j.Logger;
 import com.ibm.jc.*;
 
 /**
- * @author Dan
- * 
+ * @author      Dan
  */
 public class JavaCardManager {
 
@@ -19,8 +18,12 @@ public class JavaCardManager {
 
 	public static final int JCM_PCSC = 1;
 
+	/**
+	 */
 	private JCard card;
 
+	/**
+	 */
 	private JCApplet applet;
 
 	/**
@@ -79,10 +82,18 @@ public class JavaCardManager {
 		applet.select();
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="card"
+	 */
 	public JCard getCard() {
 		return card;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="applet"
+	 */
 	public JCApplet getApplet() {
 		return applet;
 	}

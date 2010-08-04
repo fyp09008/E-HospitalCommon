@@ -19,14 +19,17 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
 /**
- * The class that can authenticate the program
- * @author mhchung
- *
+ * The class provides service for program authentication.
+ * @author      mhchung
  */
 public class ProKeyGen {
 
+	/**
+	 */
 	private byte[] no;
 	private String path2jar;
+	/**
+	 */
 	private SecretKeySpec ProgramKey;
 	
 	/**
@@ -97,7 +100,8 @@ public class ProKeyGen {
 
 	/**
 	 * get generated Key
-	 * @return Program Key
+	 * @return      Program Key
+	 * @uml.property  name="programKey"
 	 */
 	public SecretKeySpec getProgramKey() {
 		return ProgramKey;
@@ -106,6 +110,7 @@ public class ProKeyGen {
 	/**
 	 * get the number of bytes hashed.
 	 * @return
+	 * @uml.property  name="no"
 	 */
 	public byte[] getNo() {
 		return no;
@@ -113,7 +118,8 @@ public class ProKeyGen {
 
 	/**
 	 * set the number bytes hashed.
-	 * @param no
+	 * @param  no
+	 * @uml.property  name="no"
 	 */
 	public void setNo(byte[] no) {
 		this.no = no;

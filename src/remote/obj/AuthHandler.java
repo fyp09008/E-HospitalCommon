@@ -3,7 +3,7 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 /**
- * 
+ * Authentication interface.
  * @author Gilbert, mc, chun
  *
  */

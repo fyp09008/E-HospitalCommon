@@ -4,13 +4,16 @@
 package hku.hk.cs.javacard;
 
 /**
- * @author Dan
- * 
+ * @author      Dan
  */
 public class JavaCardTimer {
 	private long startTick = 0;
+	/**
+	 */
 	private long duration = 0;
 	private long total = 0;
+	/**
+	 */
 	private int delay = 0;
 
 	public JavaCardTimer() {
@@ -37,10 +40,18 @@ public class JavaCardTimer {
 		total += duration - delay;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="delay"
+	 */
 	public int getDelay() {
 		return delay;
 	}
 
+	/**
+	 * @param  delay
+	 * @uml.property  name="delay"
+	 */
 	public void setDelay(int delay) {
 		this.delay = delay;
 	}
@@ -53,6 +64,10 @@ public class JavaCardTimer {
 		return total;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="duration"
+	 */
 	public String getDuration() {
 		return formatDuration(duration);
 	}

@@ -6,19 +6,43 @@ import java.security.*;
 import java.security.spec.*;
 import javax.crypto.*;
 
+/**
+ * Doing RSA in the machine
+ * @author      FYP 08/09
+ */
 public class RSASoftware {
-	private String privateKeyExp, publicKeyExp, modulus;
+	/**
+	 */
+	private String privateKeyExp;
+	/**
+	 */
+	private String publicKeyExp;
+	/**
+	 */
+	private String modulus;
 	private RSAPrivateKey privateKey;
 	private RSAPublicKey publicKey;
 	
+	/**
+	 * @return
+	 * @uml.property  name="privateKeyExp"
+	 */
 	public String getPrivateKeyExp() {
 		return privateKeyExp;
 	}
 	
+	/**
+	 * @return
+	 * @uml.property  name="publicKeyExp"
+	 */
 	public String getPublicKeyExp() {
 		return publicKeyExp;
 	}
 	
+	/**
+	 * @return
+	 * @uml.property  name="modulus"
+	 */
 	public String getModulus() {
 		return modulus;
 	}

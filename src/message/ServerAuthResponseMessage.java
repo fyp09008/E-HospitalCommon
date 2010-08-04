@@ -4,14 +4,15 @@ import java.io.Serializable;
 
 /**
  * obsolete class, developed in 09/10 semester 1 using socket programming.
- * @author Gilbert
- *
+ * @author      Gilbert
  */
 public class ServerAuthResponseMessage implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -8589529801648916501L;
+	/**
+	 */
 	byte[] encryptedFingerprint;
 
 	/**
@@ -21,10 +22,18 @@ public class ServerAuthResponseMessage implements Serializable {
 		this.encryptedFingerprint = encryptedFingerprint;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="encryptedFingerprint"
+	 */
 	public byte[] getEncryptedFingerprint() {
 		return encryptedFingerprint;
 	}
 
+	/**
+	 * @param  encryptedFingerprint
+	 * @uml.property  name="encryptedFingerprint"
+	 */
 	public void setEncryptedFingerprint(byte[] encryptedFingerprint) {
 		this.encryptedFingerprint = encryptedFingerprint;
 	}

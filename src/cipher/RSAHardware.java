@@ -12,9 +12,16 @@ import com.ibm.jc.JCException;
 import com.ibm.jc.JCInfo;
 import com.ibm.jc.JCard;
 
+/**
+ * doing RSA on the card.
+ * @author FYP 08/09
+ *
+ */
 public class RSAHardware {
 	private JCard card01;
-	private String privateKeyExp, publicKeyExp, modulus;
+	private String privateKeyExp;
+	private String publicKeyExp;
+	private String modulus;
 	private RSAPrivateKey privateKey;
 	private RSAPublicKey publicKey;
 	
