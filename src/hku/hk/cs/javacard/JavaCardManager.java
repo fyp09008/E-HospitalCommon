@@ -19,10 +19,12 @@ public class JavaCardManager {
 	public static final int JCM_PCSC = 1;
 
 	/**
+	 * @uml.property  name="card"
 	 */
 	private JCard card;
 
 	/**
+	 * @uml.property  name="applet"
 	 */
 	private JCApplet applet;
 

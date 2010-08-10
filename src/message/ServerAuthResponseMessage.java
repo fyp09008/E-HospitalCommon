@@ -12,6 +12,7 @@ public class ServerAuthResponseMessage implements Serializable {
 	 */
 	private static final long serialVersionUID = -8589529801648916501L;
 	/**
+	 * @uml.property  name="encryptedFingerprint"
 	 */
 	byte[] encryptedFingerprint;
 

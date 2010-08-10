@@ -16,6 +16,7 @@ public class DisconnResponseMessage implements Serializable{
 	 */
 	private static final long serialVersionUID = -8071925500966803931L;
 	/**
+	 * @uml.property  name="status"
 	 */
 	private boolean status;
 

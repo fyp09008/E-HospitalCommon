@@ -12,12 +12,15 @@ import javax.crypto.*;
  */
 public class RSASoftware {
 	/**
+	 * @uml.property  name="privateKeyExp"
 	 */
 	private String privateKeyExp;
 	/**
+	 * @uml.property  name="publicKeyExp"
 	 */
 	private String publicKeyExp;
 	/**
+	 * @uml.property  name="modulus"
 	 */
 	private String modulus;
 	private RSAPrivateKey privateKey;

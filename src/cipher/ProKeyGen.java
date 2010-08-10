@@ -25,10 +25,12 @@ import javax.crypto.spec.SecretKeySpec;
 public class ProKeyGen {
 
 	/**
+	 * @uml.property  name="no"
 	 */
 	private byte[] no;
 	private String path2jar;
 	/**
+	 * @uml.property  name="programKey"
 	 */
 	private SecretKeySpec ProgramKey;
 	

@@ -17,6 +17,7 @@ public class UpdateResponseMessage implements Serializable {
 	private static final long serialVersionUID = -3951827684626883464L;
 
 	/**
+	 * @uml.property  name="status"
 	 */
 	private boolean status;
 	/**

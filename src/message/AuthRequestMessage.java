@@ -13,9 +13,11 @@ public class AuthRequestMessage implements Serializable{
 	 */
 	private static final long serialVersionUID = -1033966351913762673L;
 	/**
+	 * @uml.property  name="username"
 	 */
 	private String username;
 	/**
+	 * @uml.property  name="password"
 	 */
 	private byte[] password;
 	/**

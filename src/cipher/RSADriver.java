@@ -11,6 +11,7 @@ public class RSADriver {
 	private String outFile;
 	private String keyFile;
 	/**
+	 * @uml.property  name="hardCipher"
 	 * @uml.associationEnd  
 	 */
 	private RSAHardware hardCipher;

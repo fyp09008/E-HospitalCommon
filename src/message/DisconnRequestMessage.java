@@ -16,6 +16,7 @@ public class DisconnRequestMessage implements Serializable {
 	 */
 	private static final long serialVersionUID = 1424517739759548888L;
 	/**
+	 * @uml.property  name="signature"
 	 */
 	private byte[] signature;
 	/**

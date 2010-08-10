@@ -9,10 +9,12 @@ package hku.hk.cs.javacard;
 public class JavaCardTimer {
 	private long startTick = 0;
 	/**
+	 * @uml.property  name="duration"
 	 */
 	private long duration = 0;
 	private long total = 0;
 	/**
+	 * @uml.property  name="delay"
 	 */
 	private int delay = 0;
 
